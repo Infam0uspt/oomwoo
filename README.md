@@ -88,7 +88,8 @@ Follow us building in public:
 
 | Module | ID | Phase | Notes |
 |---|---|---|---|
-| ROS2 URDF + Gazebo sim | [urdf-gazebo-sim](./contributions/urdf-gazebo-sim) | Ready to start work | Design URDF, TF, simulate in Gazebo |
+| ROS2 URDF + Gazebo sim | [urdf-gazebo-sim](./contributions/urdf-gazebo-sim) | Ready to start work | Design URDF, TF, bumper, simulate in Gazebo |
+| First clean: coverage + mapping + exploration | [clean-and-map](./contributions/clean-and-map) | Ready to start work | Coverage cleaning while SLAM-mapping and exploring, in Gazebo |
 | Dust bin 3D design | [dust-bin](./contributions/dust-bin) | Ready to start work | Design, 3D print, test dust bin |
 | Vacuum fan / blower assembly | [vacuum-fan](./contributions/vacuum-fan) | Ready to start work | Source blower motor + impeller, design volute housing + gasket |
 

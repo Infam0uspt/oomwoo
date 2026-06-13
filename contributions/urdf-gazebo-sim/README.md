@@ -1,6 +1,7 @@
 # URDF with Gazebo Simulation (ROS2 package)
 
-URDF (robot definition file) - a simplified URDF with Gazebo simulation.
+URDF (robot definition file) - a simplified URDF with Gazebo simulation,
+including a front bumper.
 
 ### Assembled vacuum, no top - back
 ![Teardown reference vacuum - no dock, front](../../assets/vacuum-no-dock-front.webp)
@@ -13,6 +14,10 @@ URDF (robot definition file) - a simplified URDF with Gazebo simulation.
   - I've cloned the template package
   - this package has been tested, should be reused to minimize development
   - modify URDF to match the reference vacuum cleaner
+- add a **bumper** to the URDF and simulate it in Gazebo
+  - model the conventional **front semi-circular bumper** with **left and right bumper switches**
+  - use a Gazebo contact/bumper sensor to publish contact events to ROS2, distinguishing **left vs right** contact
+  - keep the bumper geometry and mount consistent with the teardown reference
 - review, reproduce [Gazebo Simulation Instructions](https://makerspet.com/blog/tutorial-map-navigate-ros2-robot-in-simulation/)
   - review [development environment setup instructions](https://makerspet.com/blog/build-arduino-self-driving-robot-video-instructions/)
   - use this [oomwoo ROS2 development](https://github.com/makerspet/oomwoo-install) to build oomwoo ROS2 Docker image(s) with your packages
@@ -34,6 +39,9 @@ Objective, measurable. Examples:
   - Nav2 SLAM works reliably in the Living Room world
   - map gets saved successfully
   - Nav2 navigation works using a saved map
+- bumper works in simulation
+  - front semi-circular bumper with left and right switches
+  - contact events are published to ROS2 and distinguish left vs right contact
 - Documented and reliably reproducible by someone else
 - TBD, expect criteria to evolve
 
