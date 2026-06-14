@@ -22,6 +22,7 @@ Reference design images - this is approximately how the finished design will loo
 
 ![Reference robot vacuum cleaner top](./assets/vacuum_model_top.webp)
 ![Reference robot vacuum cleaner bottom](./assets/vacuum_model_bottom.webp)
+![Reference robot vacuum cleaner - top cover removed](https://github.com/makerspet/oomwoo/blob/main/assets/vacuum-no-top-back.webp)
 
 ## Goals
 
