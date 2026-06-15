@@ -86,6 +86,58 @@ Follow us building in public:
 - X: [@0OMWO0](https://x.com/@0OMWO0)
 - [Community newsletter](https://stats.sender.net/forms/bo2rAK/view).
 
+## How the RFCs fit together
+
+The modules can be worked on **in parallel**, but some build on others. An arrow
+**A → B means "B builds on A"** — green modules have no dependencies and are ready
+now; amber modules are unblocked once their parents land; the blue one needs real
+hardware. The mechanical modules (`dust-bin`, `vacuum-fan`) have no software
+dependency and can start anytime.
+
+```mermaid
+flowchart TD
+    URDF["urdf-gazebo-sim"]
+
+    CM["clean-and-map"]
+    NL["nav-localize"]
+    DC["dock-cycle"]
+    RS["recovery-safety"]
+    FC["floor-care"]
+    CJ["cleaning-jobs"]
+
+    LR["live-robot-bringup"]
+
+    DB["dust-bin"]
+    VF["vacuum-fan"]
+
+    URDF --> CM
+    URDF --> RS
+    CM --> NL
+    CM --> FC
+    NL --> DC
+    CM --> CJ
+    NL --> CJ
+    DC --> CJ
+    CM --> LR
+    NL --> LR
+    DC --> LR
+    RS --> LR
+    FC --> LR
+    CJ --> LR
+
+    classDef ready fill:#d4edda,stroke:#28a745,color:#155724;
+    classDef blocked fill:#fff3cd,stroke:#ffc107,color:#856404;
+    classDef hw fill:#cfe2ff,stroke:#0d6efd,color:#084298;
+    class URDF,DB,VF ready;
+    class CM,NL,DC,RS,FC,CJ blocked;
+    class LR hw;
+```
+
+> A standalone image of this graph (with a legend) lives at
+> [`assets/rfc-graph.png`](./assets/rfc-graph.png) for sharing on Discord, Reddit, etc.
+> The source is [`assets/rfc-graph.mmd`](./assets/rfc-graph.mmd) — edit it and re-export
+> with `npx @mermaid-js/mermaid-cli -i assets/rfc-graph.mmd -o assets/rfc-graph.png -s 3`.
+
 ## Requests for Contributions
 
 | Module | ID | Phase | Notes |
