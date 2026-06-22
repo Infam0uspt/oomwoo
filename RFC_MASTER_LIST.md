@@ -6,6 +6,7 @@ The project is split into modules that can be built in parallel.
 - Users try out contributions and the best ones surface over time.
 - The repo maintainer makes the final call which to include in the official kit(s).
 - Modules are **swappable** — a non-selected design is valuable a valid learning exercise, an alternative implementation or a fallback.
+- Design choices follow the [design research](README.md#design-research) — what makes vacuum users happy.
 
 **Phase legend:** `MVP` = needed for the Aug 31 2026 bare-bones build ·
 `P2` = next phase · `P3+` = later. **Safety** = requires maintainer safety review.
@@ -26,14 +27,15 @@ The project is split into modules that can be built in parallel.
 | Battery pack + holder | `hw-battery` | MVP | **Safety.** Chemistry/voltage per ARCHITECTURE §5.3. |
 | Compute mount (RPi 5) | `hw-compute-mount` | MVP | Mount + airflow for Pi 5. |
 | LiDAR mount | `hw-lidar-mount` | MVP | Fits LD14P; parametric for other models. |
-| Suction fan / impeller | `hw-suction` | MVP | Airflow path + impeller. |
-| Main brush assembly | `hw-main-brush` | MVP | Roller brush + drive. |
+| Suction motor + airflow | `hw-suction` | MVP | **Sourced sealed vacuum motor** + airflow sealing — not a custom impeller. |
+| Main brush assembly | `hw-main-brush` | MVP | **Tapered rubber anti-tangle roller** + drive. |
 | Dust bin + filter | `hw-dustbin` | MVP | Removable bin, filter interface. |
 | Bumper (mechanical + switches) | `hw-bumper` | MVP | Contact detection. |
 | Cliff sensors + mounts | `hw-cliff` | MVP | IR drop detection at edges/stairs. |
 | Top cover / shell | `hw-shell` | MVP | Cosmetic + protective; LiDAR clearance. |
 | Wiring harness | `hw-harness` | MVP | Connector pinouts per ARCHITECTURE §5.3. |
 | Side brush | `hw-side-brush` | P2 | Edge cleaning. |
+| Mop module (dual-spinning) | `hw-mop` | P2 | 3D-printed **dual-spinning** pads; skip self-washing roller. |
 | Wheel-drop sensors | `hw-wheel-drop` | P2 | Lift detection. |
 | Charging dock (basic) | `hw-dock` | P2 | **Safety.** Contacts + alignment. |
 
@@ -51,7 +53,7 @@ The project is split into modules that can be built in parallel.
 | Regression / CI tests | `sw-regression-tests` | MVP | Sim-based tests gating PRs. Can start now. |
 | Diagnostics / telemetry | `sw-diagnostics` | MVP | Health, logs. |
 | Autonomous exploration (sim first) | `sw-exploration` | P2 | Frontier exploration in sim. |
-| Navigation (Nav2) | `sw-nav2` | P2 | Path planning + obstacle avoidance. |
+| Navigation (Nav2) | `sw-nav2` | P2 | Path planning + LiDAR obstacle avoidance; camera/AI fusion (never-stuck) is later/experimental. |
 | Coverage path planning | `sw-coverage` | P2 | Full-floor cleaning paths. |
 | Sensor integration (bumper/cliff) | `sw-sensors` | P2 | Reactive behaviors. |
 | Behavior / state management | `sw-behavior` | P2 | Mission/state machine. |
@@ -67,4 +69,4 @@ The project is split into modules that can be built in parallel.
 | Real-home testing | MVP/P2 | Build and report on real floors. |
 | Docs / build guides | MVP | Turn working modules into step-by-step instructions. |
 | Posts / videos / demos | ongoing | Content that grows the project (highly valued). |
-| SOTA research | ongoing | Best-in-class prior art per module (part of each RFM). |
+| SOTA research | ongoing | Best-in-class prior art per module (part of each RFC). |

@@ -171,6 +171,30 @@ flowchart TD
 - [Build a ROS2/LiDAR robot crash course](https://makerspet.com/blog/build-arduino-self-driving-robot-video-instructions/) - watch this if you have no robotics experience
 - [Open Mower](openmower.de) - open-source outdoor lawn mower
 
+## Design research
+
+We reviewed the 2025–2026 consumer robot vacuum landscape (global + China-sourceable
+brands, all price tiers) to decide which solutions to copy and which to skip. Key
+takeaways for the build:
+
+- **Suction is a sourcing problem, not an engineering one.** Real-world cleaning does
+  **not** track advertised suction (Pa); ~$500 mid-tier models beat flagships. A
+  moderate **sealed** sourced motor + a good brush + tight airflow sealing matches
+  flagships — **no custom impeller needed.**
+- **"Never gets stuck" needs camera + AI sensor fusion**, not LiDAR alone — LiDAR is
+  blind below its ~10 cm turret (cables, socks). v1 leans on the **bumper** for low
+  obstacles; vision-based avoidance is a later / experimental goal, not an MVP promise.
+- **Anti-tangle brush:** a **tapered rubber roller** resists hair-wrap best (a top user
+  complaint) and is easy to 3D-print.
+- **Mop:** a 3D-printed **dual-spinning** mop is competitive; the self-washing roller
+  mop's edge is overstated and hard to replicate — skip it for now.
+
+**Well-loved models worth studying:** Eufy Omni S2 (obstacle avoidance), Narwal Flow
+(roller mop), Ecovacs Deebot T90 Pro Omni (~$499 all-rounder), Dreame X40 Ultra
+(dual-spinning mop). **Dreame** is also the most [Valetudo](https://github.com/Hypfer/Valetudo)-rootable
+brand — the safest donor to study. *(Per-model rankings are directional, from
+single-run reviewer tests.)*
+
 ## About
 
 The project name "oomwoo" is a rotational ambigram - it reads the same flipped 180°, like the robot itself, roaming your floor in every direction.

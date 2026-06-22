@@ -75,7 +75,7 @@ motor specs, mass) comes from the
 - **TBD:** Mass budget per module and total target mass.
 
 ### 5.2 Mechanical interface standard (the contract)
-Every hardware module's RFM must specify, against this standard:
+Every hardware module's RFC must specify, against this standard:
 - Mounting points (bolt pattern, location relative to `base_link`).
 - Bounding envelope (max size the module may occupy).
 - Mass budget.
@@ -101,7 +101,7 @@ Every hardware module's RFM must specify, against this standard:
 - **TBD:** Node list and the topic/service/action interfaces between them.
 - Core nodes (MVP): LiDAR driver, base controller (diff-drive), odometry,
   teleop, SLAM (manual mapping), TF/URDF publisher.
-- **Interface contract:** each software module's RFM declares the ROS2 topics,
+- **Interface contract:** each software module's RFC declares the ROS2 topics,
   services, message types, and parameters it publishes/consumes. Modules depend
   on these interfaces, not on each other's code.
 
@@ -130,7 +130,7 @@ timing. Community modules accelerate and improve the MVP; they do not block it.
 ## 8. Safety review gate
 
 Battery, charging, motor-driver, and mains-adjacent modules require maintainer
-safety review before merge. RFMs for these modules must include a hazard note
+safety review before merge. RFCs for these modules must include a hazard note
 (over-current, thermal, short, mechanical pinch).
 
 ## 9. Roadmap (phases after MVP)

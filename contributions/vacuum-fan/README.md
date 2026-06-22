@@ -8,6 +8,11 @@ The assembly consists of
 - a blower exhaust gasket
 - blower housing rubber pins
 
+> **Design research note:** real-world cleaning does **not** track raw suction (Pa) —
+> mid-range sealed motors match flagships. Prioritise a **well-sealed** airflow path
+> (no leaks at the bin / fan / brush seams) and a good brush over chasing maximum Pa.
+> See [design research](../../README.md#design-research).
+
 ### Assembled vacuum, no top - back
 ![Teardown reference vacuum - no top, vacuum fan](https://github.com/makerspet/oomwoo/blob/main/assets/vacuum-no-top-vacuum-fan.webp)
 

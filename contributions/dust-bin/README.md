@@ -4,6 +4,11 @@ This is a removable dust bin that collects dust, contains an air filter and rece
 
 The dust bin lock is spring loaded with a retractable latch on top. The dust bin inlet mates with a gasket.
 
+> **Design research note:** the bin's air seal is a primary determinant of real suction
+> — a leaky bin or gasket loses more cleaning power than a weaker motor would. Keep the
+> inlet gasket and the bin-to-fan seam airtight. See
+> [design research](../../README.md#design-research).
+
 ### Assembled vacuum, no top - back
 ![Teardown reference vacuum - no top, back](../../assets/vacuum-no-top-back.webp)
 
