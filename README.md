@@ -115,6 +115,7 @@ flowchart TD
 
     DB["dust-bin"]
     VF["vacuum-fan"]
+    SM["source-3d-models"]
 
     URDF --> CM
     URDF --> RS
@@ -134,7 +135,7 @@ flowchart TD
     classDef ready fill:#d4edda,stroke:#28a745,color:#155724;
     classDef blocked fill:#fff3cd,stroke:#ffc107,color:#856404;
     classDef hw fill:#cfe2ff,stroke:#0d6efd,color:#084298;
-    class URDF,DB,VF ready;
+    class URDF,DB,VF,SM ready;
     class CM,NL,DC,RS,FC,CJ blocked;
     class LR hw;
 ```
@@ -158,6 +159,7 @@ flowchart TD
 | Live robot bring-up & validation | [live-robot-bringup](./contributions/live-robot-bringup) | Blocked by behaviors + needs hardware | Connect real vacuum to ROS2, re-run sim tests on hardware |
 | Dust bin 3D design | [dust-bin](./contributions/dust-bin) | Ready to start work | Design, 3D print, test dust bin |
 | Vacuum fan / blower assembly | [vacuum-fan](./contributions/vacuum-fan) | Ready to start work | Source blower motor + impeller, design volute housing + gasket |
+| Source 3D models (STEP) for BOM parts | [source-3d-models](./contributions/source-3d-models) | Ready to start work | Obtain / measure / model STEP files of off-the-shelf parts (wheels, fans, caster…) so mounts fit |
 
 > The full granular module list lives in [docs/RFC_MASTER_LIST.md](docs/RFC_MASTER_LIST.md).
 
