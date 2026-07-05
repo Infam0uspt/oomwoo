@@ -48,9 +48,9 @@ Reference design images - this is approximately how the finished design will loo
 
 Open Source Deliverables:
 
-- [x] [Software development environment](https://github.com/makerspet/oomwoo-install) and [tutorials](https://makerspet.com/blog/simulate-oomwoo-one-robot-vacuum-in-gazebo-with-ros-2/) (ROS2)
+- [x] [Software development environment](https://github.com/makerspet/oomwoo-install), robot [description package](https://github.com/makerspet/oomwoo-one/) and [tutorials](https://makerspet.com/blog/simulate-oomwoo-one-robot-vacuum-in-gazebo-with-ros-2/) (ROS2)
 - [x] Placeholder real [vacuum cleaner](https://github.com/makerspet/proscenic-m6pro) and [tutorials](https://makerspet.com/blog/tutorial-connect-robot-vacuum-cleaner-to-ros-2-proscenic-m6-pro/) (temporary while OOMWOO is being designed)
-- [ ] [Bill of materials (BoM)](BOM.md)
+- [ ] [Bill of materials (BoM)](BOM.md) (in progress)
 - [ ] 3D-printable files
 - [ ] Firmware
 - [ ] Motor drivers and sensors [I/O PCB](https://github.com/makerspet/oomwoo-io-board)
